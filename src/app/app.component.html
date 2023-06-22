@@ -1,2 +1,3 @@
 <app-navbar [fromParent]="navbarName"></app-navbar>
-<app-post></app-post>
+<app-post (btnMessage)="recievemessage($event)"></app-post>
+{{receivedmsg}}

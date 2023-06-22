@@ -7,6 +7,7 @@ import { Component,Input } from '@angular/core';
 })
 export class PostListsComponent {
 
+  btnName:string='Click-child'
   @Input() postlists!:string
 
 }
