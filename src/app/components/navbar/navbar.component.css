@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+.nav{
+    background-color:rgb(111, 105, 105);
+    height:70px
+}
+.navbar-brand{
+    margin-left:25px;
+    font-weight:500;
+    font-size:x-large;
+    color: rgb(132, 9, 9);
+}

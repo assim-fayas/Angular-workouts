@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-workout';
+
+// maessage passing to child component named navbar
+  navbarName:string='Angular workouts'
 }
