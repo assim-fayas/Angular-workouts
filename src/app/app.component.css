@@ -1,0 +1,10 @@
+p,.btn,input{
+    margin-top: 15px;
+    margin-left:25px;
+}
+
+.background-color{
+    background-color: brown;
+    height: 30px;
+    width: 200px;
+}

@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="form">
+
+        <div class="title">
+            <h1>{{postHead}}</h1>
+        </div> <br><br>
+
+        <input type="text" [(ngModel)]="posttitle" (keyup.enter)="clickPosttitle()" placeholder="post title"><br><br>
+
+        <textarea cols="30" rows="10" [(ngModel)]="postDetails" (keyup.enter)="clickpostDetails()"
+            placeholder="post details"></textarea><br><br>
+
+        <input type=text [(ngModel)]="postimgUrl" (keyup.enter)="clickimg()" placeholder="post image url"><br><br>
+        <input type="text" [(ngModel)]="postUrl" (keyup)="clickurl()" placeholder="post url"><br><br>
+
+        <input type="checkbox" [(ngModel)]="postcheck"  >Add background
+
+    </div>
+</div>
+
+<div class="result">
+    <div class="center">
+    <img [src]="imgrslt" alt=""> <br> <br>
+    <h2 [style.background]="postcheck ? 'blue' :'' ">{{titlerslt}}</h2>
+    <p>{{postrslt}}</p>
+    <a [href]="urlrslt" target="_blank" [style.display]="urlrslt ? 'block':'none' ">More Details </a>
+   
+</div>
+</div>
