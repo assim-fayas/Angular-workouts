@@ -30,5 +30,36 @@ export class PostComponent implements AfterViewInit {
   sendMessage(){
     this.btnMessage.emit(this.messageVia)
   }
+
+
+  //directives
+
+  postArray:Array<string>=['post 1','post 2','post 3','post 4']
  
+ 
+  objArray:Array<any>=[
+    {id:1 , post:'post 1'},
+    {id:2 , post:'post 2'},
+    {id:3 , post:'post 3'},
+    {id:4 , post:'post 4'},
+    {id:5 , post:'post 5'},
+    {id:6 , post:'post 6'},
+  ]
+
+  addData(){
+    this.postArray.push(` post  ${ this. postArray.length+1}`)
+  }
+
+  addNew(){
+    this.objArray.push({id:7,post:'post 7'})
+  }
+
+onDelete(index:any){
+this.postArray.splice(index,1)
+  }
+
+  delete(post:any){
+let index=this.objArray.indexOf(post)
+this.objArray.splice(index,1)
+  }
 }

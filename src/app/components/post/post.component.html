@@ -1,3 +1,45 @@
 <p>{{title}}</p>
 <app-post-lists [postlists]="postlist"></app-post-lists>
- <button class="btn-outline-success btn" (click)="sendMessage()">{{message}}</button>
+ <button class="btn-outline-success btn" (click)="sendMessage()">{{message}}</button> <br>
+<br>
+
+<!-- ngFor directive -->
+
+<!-- from array -->
+<h4> fetching from array</h4>
+
+ <!-- angular change detection -->
+ <button (click)="addData()">Add New</button> 
+ <br><br>
+
+ <div *ngIf='objArray.length > 0 ; else nodata'>
+ <ul>
+    <li *ngFor="let post of postArray;let i=index">{{post}}
+        <button (click)="onDelete(i)">Delete</button>
+    </li>
+  
+ </ul>
+</div>
+<ng-template #nodata>
+ <p>there is no data to fetch</p>
+</ng-template>
+
+ <br>
+
+
+
+<!-- from object array -->
+<h4> fetching from object array</h4>
+
+  <!-- angular change detection -->
+  <button (click)="addNew()">Add New</button><br>
+  <br>
+<ol>
+    <li *ngFor="let postobj of objArray">{{ postobj.post }}
+        <button (click)="delete(postobj)">Delete</button>
+    </li>
+   
+  </ol>
+  
+
+
