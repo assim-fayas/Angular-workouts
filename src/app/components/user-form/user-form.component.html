@@ -30,11 +30,12 @@
                 <td>{{fields.address}}</td>
                <td><button (click)="onDelete(i)">Delete</button></td>
               </tr>
-            
+             
             </tbody>
-            <ng-template #noData><br>
-                <h4>Your table is empty...</h4>
-            </ng-template>
-          </table>
+           
+          </table> 
+          <ng-template #noData>
+            <h6>Your table is empty...</h6>
+        </ng-template>
     </div>
 </div>
