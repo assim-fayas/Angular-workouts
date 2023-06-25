@@ -1,0 +1,40 @@
+
+<div class="container">
+    <div class="form">
+        <h1>{{title}}</h1> <br>
+        <input type="text" [(ngModel)]="formName" (keyup)="enteredName()" placeholder="Name" ><br><br>
+        <input type="email"[(ngModel)]="email" (keyup)="enteredEmail()" placeholder="Email"><br><br>
+        <textarea  id="" cols="30" rows="10"[(ngModel)]="Address" (keyup)="enteredAddress()"  placeholder="Address"></textarea><br><br>
+        <button (click)="onclick()">Save Data</button>
+    </div>
+</div>
+
+<div class="result">
+    <div class="center">
+        <table class="table ">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Address</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody *ngIf="objArray.length > 0; else noData">
+                
+              <tr *ngFor="let fields of objArray; let i=index">
+                <td>{{i+1}}</td>
+                <td>{{fields.name}}</td>
+                <td>{{fields.email}}</td>
+                <td>{{fields.address}}</td>
+               <td><button (click)="onDelete(i)">Delete</button></td>
+              </tr>
+            
+            </tbody>
+            <ng-template #noData><br>
+                <h4>Your table is empty...</h4>
+            </ng-template>
+          </table>
+    </div>
+</div>

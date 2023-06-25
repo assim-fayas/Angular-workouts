@@ -10,6 +10,7 @@ export class PostComponent implements AfterViewInit {
   postlist: string = 'here is the list of the post'
 
   title: string = 'post shows here'
+  bool:boolean=true
 
   // @viewchild
 
@@ -62,4 +63,16 @@ this.postArray.splice(index,1)
 let index=this.objArray.indexOf(post)
 this.objArray.splice(index,1)
   }
+
+// ngSwitch case
+
+stepForm!:string
+
+  onclick(step:string){
+ this.stepForm=step
+ console.log(step);
+ 
+ 
+  }
 }
+

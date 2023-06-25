@@ -39,7 +39,27 @@
         <button (click)="delete(postobj)">Delete</button>
     </li>
    
-  </ol>
-  
+  </ol><br><br>
 
+ 
+  <h4 [ngClass]="{borders:'bool',text:'bool'}"> switch case and attribute directive</h4> <!--  class directive -->
+  
+  <!-- switch case  and attribute directive-->
+  <div>
+    <button (click)="onclick('step 1')">step 1</button>
+    <button (click)="onclick('step 2')">step 2</button>
+    <button (click)="onclick('step 3')">step 3</button>
+  </div>
+  <br><br>
+  
+<div [ngSwitch]="stepForm">
+  <!-- atribute directive -->
+<div *ngSwitchCase="'step 1'" [ngStyle]="{color:bool ? 'red':'blue' ,
+textTransform:bool? 'uppercase':'lowercase'}">Step 1 form</div>
+<span *ngSwitchCase="'step 2'" [ngStyle]="{backgroundColor:bool ? 'green' : 'blue'}">Step 2 form</span>
+<div *ngSwitchCase="'step 3'" [ngStyle]="{fontSize:bool ? '100px' : '10px'}">Step 3 form</div>
+<div *ngSwitchDefault> <p>Something Else</p> </div>
+
+
+</div>
 

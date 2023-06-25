@@ -1,6 +1,15 @@
 p,
-.btn,button ,h4{
+.btn,button ,h4,div,span{
     margin-top: 15px;
     margin-left: 25px;
 }
 
+.borders{
+
+    border-style: double;
+    border-color: darkgreen;
+}
+.text{
+    
+    color:tan;
+}
