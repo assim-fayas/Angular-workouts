@@ -1,5 +1,5 @@
 <app-navbar [fromParent]="navbarName"></app-navbar>
-<app-post (btnMessage)="recievemessage($event)"></app-post><br><br>
+<!-- <app-post (btnMessage)="recievemessage($event)"></app-post><br><br> -->
 {{receivedmsg}} 
 
 
@@ -30,4 +30,11 @@
 <app-user-form></app-user-form>
 <app-pipes></app-pipes>
 <app-template-form></app-template-form>
-<app-reactive-form></app-reactive-form>
+<app-reactive-form></app-reactive-form><br>
+
+
+<button class="btn-primary mt-5 ms-5 mb-5" routerLink="/post">post component</button>
+<button class="btn-primary mt-5 ms-5 mb-5" routerLink="/">Home</button>
+<a routerLink="/post">post comp</a>
+
+<router-outlet></router-outlet>

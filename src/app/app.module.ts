@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import {RouterModule} from "@angular/router";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { AppendPipe } from './pipes/append.pipe';
 import { SummaryPipe } from './pipes/summary.pipe';
 import { TemplateFormComponent } from './components/template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { PostListComponent } from './post-list/post-list.component';
 
 
 @NgModule({
@@ -29,13 +31,17 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     SummaryPipe,
     TemplateFormComponent,
     ReactiveFormComponent,
+    PostListComponent,
  
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot([
+      {path:'post',component:PostComponent}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
